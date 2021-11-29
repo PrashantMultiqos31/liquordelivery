@@ -1,6 +1,6 @@
-# liquordelivery
+# Liquor Delivery
 
-Liquor delivery App is dark and light theme base Liquor delivery flutter application .
+Liquor delivery is dark and light theme based E-commerce Liquor delivery flutter application .
 
 ## Project Created & Maintained By
 
