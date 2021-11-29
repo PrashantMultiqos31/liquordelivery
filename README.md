@@ -7,13 +7,10 @@ A Flutter project is Liquor delivery as well as dark and light theme as per devi
  [MultiQoS Pvt. Ltd.](https://multiqos.com/)
 
 # Demo
+![darkmode](https://user-images.githubusercontent.com/94357546/143814147-c7c44e92-97ea-4ae1-89bb-39bc6fd645e9.gif)
 
 
-https://user-images.githubuse
 
-https://user-images.githubusercontent.com/94357546/143813206-2886510d-1bfd-48db-acfe-7b61d0b606ef.mp4
-
-rcontent.com/94357546/143813171-3dbb0794-bf8d-4d83-bb8c-943738ba4ca0.mp4
 
 
 ![ezgif com-gif-maker]()
