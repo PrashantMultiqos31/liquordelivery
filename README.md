@@ -7,7 +7,11 @@ Liquor delivery is dark and light theme based E-commerce Liquor delivery flutter
  [MultiQoS Pvt. Ltd.](https://multiqos.com/)
 
 # Demo
-![liquor](https://user-images.githubusercontent.com/94357546/143883294-2ffe76b0-ea57-49ba-84bc-904734a81752.gif)
+
+
+
+https://user-images.githubusercontent.com/94357546/143883631-61597956-c742-4504-93bf-94eeba0175a1.mp4
+
 
 
 
