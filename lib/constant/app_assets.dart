@@ -12,6 +12,8 @@ class AssetImages {
   static const String minus = 'assets/images/minus.png';
   static const String beer = 'assets/images/bira.png';
   static const String home = 'assets/images/home.png';
+  static const String whiskyCd = 'assets/images/whiskycd.png';
+  static const String redCd = 'assets/images/redcd.png';
   static const String bike = 'assets/images/bike.png';
   static const String person = 'assets/images/person.jpeg';
   static const String redHeart = 'assets/images/redheart.png';

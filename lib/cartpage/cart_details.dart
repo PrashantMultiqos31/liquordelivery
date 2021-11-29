@@ -31,7 +31,7 @@ class _CartDetailsState extends State<CartDetails> {
   ItemData? itemData;
   int price = 0;
   int texPrice = 50;
-  int delPrice = 50;
+  int deliveryPrice = 50;
 
   @override
   void initState() {
@@ -55,6 +55,7 @@ class _CartDetailsState extends State<CartDetails> {
       ),
     );
   }
+
   // List of All categories
   Widget _categories() {
     return ListView.builder(
@@ -64,10 +65,11 @@ class _CartDetailsState extends State<CartDetails> {
           return _cartItemTiles(index);
         });
   }
+
 // addiction and total of all cart value as well as tex and delivery Charges
   Widget _bottomSheetView() {
     return SizedBox(
-      height: 220,
+      height: 230,
       child: Card(
         elevation: 10,
         color: Theme.of(context).highlightColor,
@@ -96,7 +98,8 @@ class _CartDetailsState extends State<CartDetails> {
                   ),
                   Text(
                     price.toString(),
-                    style: AppFontStyle.viewAll,
+                    style: AppFontStyle.viewAll
+                        .copyWith(fontWeight: FontWeight.w600, fontSize: 16),
                   ),
                 ],
               ),
@@ -109,11 +112,16 @@ class _CartDetailsState extends State<CartDetails> {
                   Text(
                     kTax,
                     style: AppFontStyle.textFieldPrice.copyWith(
-                        color: Theme.of(context).textTheme.bodyText1!.color),
+                      color: Theme.of(context).textTheme.bodyText1!.color,
+                    ),
                   ),
-                  const Text(
+                  Text(
                     '\$ 50',
-                    style: AppFontStyle.viewAll,
+                    style: AppFontStyle.viewAll.copyWith(
+                      fontWeight: FontWeight.w600,
+                      fontFamily: 'openSans',
+                      fontSize: 16,
+                    ),
                   ),
                 ],
               ),
@@ -128,9 +136,10 @@ class _CartDetailsState extends State<CartDetails> {
                     style: AppFontStyle.textFieldPrice.copyWith(
                         color: Theme.of(context).textTheme.bodyText1!.color),
                   ),
-                  const Text(
+                  Text(
                     '\$ 50',
-                    style: AppFontStyle.viewAll,
+                    style: AppFontStyle.viewAll
+                        .copyWith(fontWeight: FontWeight.w600, fontSize: 16),
                   ),
                 ],
               ),
@@ -150,10 +159,12 @@ class _CartDetailsState extends State<CartDetails> {
                   Text(
                     kTotalAmount,
                     style: AppFontStyle.smallSize.copyWith(
-                        color: Theme.of(context).textTheme.bodyText1!.color),
+                        color: Theme.of(context).textTheme.bodyText1!.color,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w400),
                   ),
                   Text(
-                    (price + texPrice + delPrice).toString(),
+                    (price + texPrice + deliveryPrice).toString(),
                     style: AppFontStyle.viewAll
                         .copyWith(fontWeight: FontWeight.bold),
                   ),
@@ -236,7 +247,9 @@ class _CartDetailsState extends State<CartDetails> {
                                         int temp = _loadList[index].counter;
                                         temp = temp - 1;
                                         _loadList[index].sCounter = temp;
-                                        temp == 0 ? _loadList.removeAt(index) : 1;
+                                        temp == 0
+                                            ? _loadList.removeAt(index)
+                                            : 1;
                                       });
                                     },
                                     child: const Padding(
@@ -251,8 +264,11 @@ class _CartDetailsState extends State<CartDetails> {
                               ),
                             ),
                             Text(_loadList[index].counter.toString(),
-                                style:
-                                TextStyle(color: Theme.of(context).textTheme.bodyText1!.color)),
+                                style: TextStyle(
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText1!
+                                        .color)),
                             Padding(
                               padding: const EdgeInsets.all(10.0),
                               child: Container(
@@ -291,8 +307,10 @@ class _CartDetailsState extends State<CartDetails> {
                               (_loadList[index].itemPrice! *
                                       _loadList[index].counter)
                                   .toString()),
-                          style: AppFontStyle.normalTextSize
-                              .copyWith(color: AppColors.lightBtnColor),
+                          style: AppFontStyle.normalTextSize.copyWith(
+                            color: AppColors.lightBtnColor,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
                       ],
                     ),

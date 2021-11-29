@@ -83,20 +83,20 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Poppins
+    - family: OpenSans
       fonts:
-        - asset: assets/fonts/Poppins-Black.ttf
+        - asset: assets/fonts/OpenSans-Bold.ttf
+          weight: 200
+        - asset: assets/fonts/OpenSans-Light.ttf
           weight: 100
-        - asset: assets/fonts/Poppins-Bold.ttf
-          weight: 100
-        - asset: assets/fonts/Poppins-Light.ttf
-          weight: 100
-        - asset: assets/fonts/Poppins-Medium.ttf
-          weight: 100
-        - asset: assets/fonts/Poppins-Regular.ttf
-          weight: 100
-        - asset: assets/fonts/Poppins-SemiBold.ttf
-          weight: 100
+        - asset: assets/fonts/OpenSans-Medium.ttf
+          weight: 300
+        - asset: assets/fonts/OpenSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/OpenSans-SemiBold.ttf
+          weight: 500
+        - asset: assets/fonts/OpenSans-Light.ttf
+          weight: 600
 
   #   - family: Trajan Pro
   #     fonts:

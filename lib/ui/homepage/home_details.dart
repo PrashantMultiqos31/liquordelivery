@@ -37,6 +37,28 @@ class _DetailsHomeState extends State<DetailsHome> {
     'Beer'
   ];
 
+  final List<String> brandNames = [
+    'Chivas Regal',
+    'Crown Royal',
+    'Jack Daniel',
+    'Jim Beam',
+    'Jagereister',
+    'Baileys',
+    'Fernet Branca',
+    'Fireball'
+  ];
+
+  final List<String> prices = [
+    '\$ 190',
+    '\$ 180',
+    '\$ 120',
+    '\$ 200',
+    '\$ 250',
+    '\$ 290',
+    '\$ 4000',
+    'v'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,8 +73,9 @@ class _DetailsHomeState extends State<DetailsHome> {
         title: Text(
           kLiquor,
           style: AppFontStyle.normalTextSize.copyWith(
+            fontWeight: FontWeight.w400,
             color: Theme.of(context).textTheme.bodyText1!.color,
-            fontSize: 18,
+            fontSize: 20,
           ),
         ),
         actions: [
@@ -118,6 +141,7 @@ class _DetailsHomeState extends State<DetailsHome> {
       ),
     );
   }
+
 //all categories list here
   Widget _categories() {
     return ListView.builder(
@@ -169,6 +193,7 @@ class _DetailsHomeState extends State<DetailsHome> {
       },
     );
   }
+
 //popular brand list
   Widget _popularBrand() {
     return ListView.builder(
@@ -223,7 +248,7 @@ class _DetailsHomeState extends State<DetailsHome> {
                       ),
                     ),
                     Text(
-                      names[index],
+                      brandNames[index],
                       style: AppFontStyle.smallSizeFont.copyWith(
                         color: Theme.of(context).textTheme.bodyText1!.color,
                       ),
@@ -232,7 +257,7 @@ class _DetailsHomeState extends State<DetailsHome> {
                       height: 8,
                     ),
                     Text(
-                      names[index],
+                      prices[index],
                       style: AppFontStyle.smallSizeFont
                           .copyWith(color: Theme.of(context).bottomAppBarColor),
                     ),
@@ -248,6 +273,7 @@ class _DetailsHomeState extends State<DetailsHome> {
       },
     );
   }
+
 // all page heading
   Widget _headingTitle(String names, String viewAll) {
     return Row(
@@ -257,7 +283,8 @@ class _DetailsHomeState extends State<DetailsHome> {
           names,
           style: AppFontStyle.textFieldPrice.copyWith(
               color: Theme.of(context).textTheme.bodyText1!.color,
-              fontSize: 18),
+              fontSize: 20,
+              fontWeight: FontWeight.w600),
         ),
         Padding(
           padding: const EdgeInsets.only(right: 10),
@@ -270,6 +297,7 @@ class _DetailsHomeState extends State<DetailsHome> {
       ],
     );
   }
+
 // searchbar add here
   Widget _searchBar() {
     return Stack(
@@ -280,7 +308,7 @@ class _DetailsHomeState extends State<DetailsHome> {
               border: Border.all(color: Theme.of(context).shadowColor),
               borderRadius: const BorderRadius.all(Radius.circular(5))),
           child: Padding(
-            padding:const EdgeInsets.only(left: 10),
+            padding: const EdgeInsets.only(left: 10),
             child: TextField(
               maxLines: 1,
               decoration: InputDecoration(
@@ -292,7 +320,8 @@ class _DetailsHomeState extends State<DetailsHome> {
                   disabledBorder: InputBorder.none,
                   hintText: kSearch,
                   hintStyle: AppFontStyle.normalTextSize.copyWith(
-                      color: Theme.of(context).textTheme.bodyText1!.color)),
+                      color: Theme.of(context).textTheme.bodyText1!.color,
+                      fontWeight: FontWeight.w400)),
             ),
           ),
         ),

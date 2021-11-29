@@ -93,7 +93,6 @@ class _GoogleMApDeliveryState extends State<GoogleMApDelivery> {
     ));
 
     _markers.add(Marker(
-      rotation: 90,
       icon: BitmapDescriptor.fromBytes(markerIcon1),
       markerId: MarkerId(_lat2.toString()),
       position: _lat2,

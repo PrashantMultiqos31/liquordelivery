@@ -14,7 +14,7 @@ class BrandDetailsPage extends StatefulWidget {
 }
 
 class _BrandDetailsPageState extends State<BrandDetailsPage> {
-  bool _alreadySaved = false;
+  bool _favourite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,8 @@ class _BrandDetailsPageState extends State<BrandDetailsPage> {
                           children: [
                             Center(
                               child: Container(
-                                height: MediaQuery.of(context).size.height / 1.6,
+                                height:
+                                    MediaQuery.of(context).size.height / 1.6,
                                 width: MediaQuery.of(context).size.width / 2,
                                 decoration: BoxDecoration(
                                   borderRadius: const BorderRadius.only(
@@ -40,9 +41,12 @@ class _BrandDetailsPageState extends State<BrandDetailsPage> {
                                   color: Theme.of(context).highlightColor,
                                   shape: BoxShape.rectangle,
                                 ),
-                                child:const Padding(
-                                  padding:  EdgeInsets.only(top: 60,bottom: 40,),
-                                  child:  Image(
+                                child: const Padding(
+                                  padding: EdgeInsets.only(
+                                    top: 60,
+                                    bottom: 40,
+                                  ),
+                                  child: Image(
                                     height: 150,
                                     fit: BoxFit.fitHeight,
                                     image: AssetImage(AssetImages.redLabel),
@@ -71,17 +75,16 @@ class _BrandDetailsPageState extends State<BrandDetailsPage> {
                           ),
                         ),
                         IconButton(
-                          icon: _alreadySaved
+                          icon: _favourite
                               ? const Image(
                                   image: AssetImage(AssetImages.redHeart))
-                              :  Image(
-                            color: Theme.of(context).buttonColor,
-                                  image: const AssetImage(AssetImages.blackHeart)),
+                              : Image(
+                                  color: Theme.of(context).buttonColor,
+                                  image:
+                                      const AssetImage(AssetImages.blackHeart)),
                           onPressed: () {
-                            _alreadySaved = !_alreadySaved;
-                            setState(() {
-
-                            });
+                            _favourite = !_favourite;
+                            setState(() {});
                           },
                           color: Theme.of(context).textTheme.bodyText1!.color,
                         ),
@@ -97,6 +100,7 @@ class _BrandDetailsPageState extends State<BrandDetailsPage> {
       ),
     );
   }
+
 // liquor details with counter
   Widget _customBottom() {
     return Column(
@@ -114,8 +118,7 @@ class _BrandDetailsPageState extends State<BrandDetailsPage> {
                 'Red Wine',
                 style: AppFontStyle.textFieldPrice.copyWith(
                     color: Theme.of(context).textTheme.bodyText1!.color,
-                  fontSize: 18
-                ),
+                    fontSize: 18),
               ),
               const Spacer(),
               Text(
@@ -146,6 +149,7 @@ class _BrandDetailsPageState extends State<BrandDetailsPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
+                height: 50,
                 width: MediaQuery.of(context).size.width * 0.3,
                 decoration: BoxDecoration(
                   color: Theme.of(context).highlightColor,
@@ -163,6 +167,7 @@ class _BrandDetailsPageState extends State<BrandDetailsPage> {
                 },
                 child: Container(
                   padding: const EdgeInsets.all(8),
+                  height: 50,
                   width: MediaQuery.of(context).size.width * 0.5,
                   decoration: BoxDecoration(
                     color: AppColors.lightBtnColor,
@@ -171,12 +176,8 @@ class _BrandDetailsPageState extends State<BrandDetailsPage> {
                       color: AppColors.lightBtnColor,
                     ),
                   ),
-                  child:const Center(
-                      child: Text(
-                    kAddToBeg,
-                    style: AppFontStyle.textFieldPrice
-
-                  ),
+                  child: const Center(
+                    child: Text(kAddToBeg, style: AppFontStyle.textFieldPrice),
                   ),
                 ),
               ),
@@ -186,6 +187,7 @@ class _BrandDetailsPageState extends State<BrandDetailsPage> {
       ],
     );
   }
+
   //liquor details
   Widget _liquorSpecification() {
     return Padding(

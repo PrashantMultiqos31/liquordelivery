@@ -21,11 +21,11 @@ class _CustomButtonState extends State<CustomButton> {
       child: ElevatedButton(
         style: ButtonStyle(
           backgroundColor:
-              MaterialStateProperty.all<Color>(AppColors.lightBtnColor),
+              MaterialStateProperty.all<Color>(AppColors.lightButton),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16.0),
-              side: const BorderSide(color: AppColors.lightBtnColor),
+              side: const BorderSide(color: AppColors.lightButton),
             ),
           ),
         ),
@@ -39,6 +39,7 @@ class _CustomButtonState extends State<CustomButton> {
           kProcessCheckOut,
           style: TextStyle(
             color: AppColors.black,
+            fontWeight: FontWeight.w400
           ),
         ),
       ),
